@@ -1,0 +1,12 @@
+services:
+  travel_planner_app:
+    build: .
+    container_name: travel_planner_app
+    ports:
+      - "8000:8000"
+    volumes:
+      - travel_planner_db:/app/travel_planner.db
+    restart: on-failure
+
+volumes:
+  travel_planner_db:
